@@ -23,10 +23,8 @@ namespace TripApi.Services
             _context = context;
         }
 
-        /// <summary>
         /// Retrieves a paginated list of trips (sorted by DateFrom descending),
         /// including related countries and clients.
-        /// </summary>
         public async Task<PaginatedResult<TripDto>> GetTripsAsync(int pageNum, int pageSize)
         {
             if (pageNum < 1) pageNum = 1;
