@@ -15,7 +15,7 @@ namespace TripApi.Controllers
             _clientService = clientService;
         }
         
-        /// DELETE /api/clients/{idClient}
+
         [HttpDelete("{idClient}")]
         public async Task<IActionResult> DeleteClient(int idClient)
         {
