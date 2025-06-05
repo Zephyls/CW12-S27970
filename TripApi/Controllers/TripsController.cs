@@ -16,8 +16,7 @@ namespace TripApi.Controllers
             _tripService = tripService;
         }
         
-        /// GET /api/trips?page={page}&pageSize={pageSize}
-        /// If page/pageSize are not provided, defaults to 1/10.
+
         [HttpGet]
         public async Task<IActionResult> GetTrips([FromQuery] int? page, [FromQuery] int? pageSize)
         {
@@ -37,7 +36,7 @@ namespace TripApi.Controllers
             return Ok(response);
         }
         
-        /// POST /api/trips/{idTrip}/clients
+
         [HttpPost("{idTrip}/clients")]
         public async Task<IActionResult> AddClientToTrip(int idTrip, [FromBody] CreateClientForTripDto dto)
         {
